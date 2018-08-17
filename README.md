@@ -1,0 +1,1 @@
+# venkuzaseprsi.cz
