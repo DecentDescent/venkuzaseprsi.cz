@@ -1,6 +1,6 @@
 # venkuzaseprsi.cz
 
-Repository for blog venkuzaseprsi.cz by Decent_Descent. Developed in one rainy afternoon (that's a lie).
+Repository for blog [venkuzaseprsi.cz](https://www.venkuzaseprsi.cz) by [@DecentDescent](https://github.com/DecentDescent/). Developed in one rainy afternoon (that's a lie).
 No WordPress! No puppies were killed during the development.
 
 #### How to start dev environment
