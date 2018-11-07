@@ -1,6 +1,7 @@
 # venkuzaseprsi.cz
 
 Repository for blog venkuzaseprsi.cz by Decent_Descent. Developed in one rainy afternoon (that's a lie).
+No WordPress! No puppies were killed during the development.
 
 #### How to start devel
 
@@ -17,5 +18,8 @@ Repository for blog venkuzaseprsi.cz by Decent_Descent. Developed in one rainy a
 - NextJS by Zeit + nextjs-sass
 - \_reset.scss by Eric Meyer + Trey Piepmeier + Jason T Johnson
 - Rain by Gera Music (AudioJungle.net)
+- Data served by Markdown & JSON
 
 #### Special Thanks
+
+- Tom Randus ()
