@@ -23,5 +23,5 @@ No WordPress! No puppies were killed during the development.
 
 #### Special Thanks
 
-- Tom Randus [@dizzyn](https://github.com/dizzyn)
+- Tom Randus ([@dizzyn](https://github.com/dizzyn))
 - Maja Chabirova
