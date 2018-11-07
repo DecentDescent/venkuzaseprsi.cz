@@ -3,10 +3,11 @@
 Repository for blog venkuzaseprsi.cz by Decent_Descent. Developed in one rainy afternoon (that's a lie).
 No WordPress! No puppies were killed during the development.
 
-#### How to start devel
+#### How to start dev environment
 
 1. Run `npm install`
 2. Run `npm run dev`
+3. Go to `localhost:3000`
 
 #### How to deploy
 
@@ -22,4 +23,5 @@ No WordPress! No puppies were killed during the development.
 
 #### Special Thanks
 
-- Tom Randus ()
+- Tom Randus [@dizzyn][https://github.com/dizzyn]
+- Maja Chabirova
