@@ -1,0 +1,32 @@
+{
+  "name": "venkuzaseprsi.cz",
+  "version": "1.0.0",
+  "description": "Best Blog Ever",
+  "main": "index.js",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^7.0.2",
+    "node-sass": "^4.10.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DecentDescent/venkuzaseprsi.cz.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Jan Rádl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DecentDescent/venkuzaseprsi.cz/issues"
+  },
+  "homepage": "https://github.com/DecentDescent/venkuzaseprsi.cz#readme"
+}
