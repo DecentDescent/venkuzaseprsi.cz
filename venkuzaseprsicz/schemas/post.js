@@ -24,6 +24,16 @@ export default {
       of: [{ type: "reference", to: { type: "category" } }]
     },
     {
+      name: "song",
+      title: "Song",
+      type: "string"
+    },
+    {
+      name: "songURL",
+      title: "Song Spotify URL",
+      type: "string"
+    },
+    {
       name: "mainImage",
       title: "Main image",
       type: "image",
