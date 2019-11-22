@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../layouts/Main";
+import { LayoutHome as Layout } from "../components/Layout";
 import { getPosts } from "../api/posts";
 import Post from "../components/Post";
 

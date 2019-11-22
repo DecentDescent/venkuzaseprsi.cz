@@ -14,6 +14,21 @@ export default {
       type: "number"
     },
     {
+      name: "body",
+      title: "Body",
+      type: "blockContent"
+    },
+    {
+      name: "excerpt",
+      title: "Excerpt",
+      type: "text"
+    },
+    {
+      name: "category",
+      title: "Category",
+      type: "string"
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -23,10 +38,19 @@ export default {
       }
     },
     {
-      name: "categories",
-      title: "Categories",
-      type: "array",
-      of: [{ type: "reference", to: { type: "category" } }]
+      name: "image",
+      title: "Image",
+      type: "string"
+    },
+    {
+      name: "imageLink",
+      title: "Image Link",
+      type: "string"
+    },
+    {
+      name: "imageAuthor",
+      title: "Image Author",
+      type: "string"
     },
     {
       name: "song",
@@ -39,25 +63,6 @@ export default {
       type: "string"
     },
     {
-      name: "mainImage",
-      title: "Main image",
-      type: "image",
-      options: {
-        hotspot: true
-      }
-    },
-    {
-      name: "body",
-      title: "Body",
-      type: "blockContent"
-    },
-    {
-      name: "excerpt",
-      title: "Excerpt",
-      type: "text"
-    },
-
-    {
       name: "publishedAt",
       title: "Published at",
       type: "datetime"
@@ -66,8 +71,7 @@ export default {
 
   preview: {
     select: {
-      title: "title",
-      media: "mainImage"
+      title: "title"
     },
     prepare(selection) {
       const { author } = selection;

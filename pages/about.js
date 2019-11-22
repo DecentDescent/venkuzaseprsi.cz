@@ -1,3 +1,3 @@
-import Layout from 'layouts/Main'
+import { LayoutPage as Layout } from "../components/Layout";
 
-export default () => <Layout>About Page</Layout>
+export default () => <Layout>About Page</Layout>;

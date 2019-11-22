@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Karma|Quicksand|VT323&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,400i&display=swap&subset=latin-ext");
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+// General Styles
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  &.main--post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+  }
+}
+
+// Post Styles
+.post__image {
+  width: 100%;
+  height: 100%;
+
+  .image__credit {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 18px;
+    font-family: "VT323", monospace;
+    opacity: 0.6;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.5s;
+
+      span {
+        font-family: "Titillium Web", sans-serif;
+        font-size: 20px;
+        vertical-align: middle;
+        margin-right: -2px;
+      }
+
+      &:hover {
+        color: cyan;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.post__article {
+  overflow: auto;
+  padding: 48px 64px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+
+  article {
+    max-width: 550px;
+    margin: 0 auto;
+
+    h1 {
+      font-family: "VT323", monospace;
+      font-size: 54px;
+      text-align: center;
+    }
+
+    p {
+      font-family: "Titillium Web", serif;
+      font-size: 19px;
+      line-height: 1.6;
+      margin: 32px 0;
+    }
+  }
+}

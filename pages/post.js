@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../layouts/Main";
+import { LayoutPost } from "../components/Layout";
 import { getNextPost, getPost } from "../api/posts";
 import BlockContent from "@sanity/block-content-to-react";
 import { Link } from "../routes";
@@ -23,13 +23,19 @@ const PostPage = ({ post }) => {
     return "Loading";
   }
   return (
-    <Layout>
-      <h1>{post.order}</h1>
+    <LayoutPost
+      imageAuthor={post.imageAuthor}
+      imageLink={post.imageLink}
+      image={post.image}
+    >
+      <h1>{post.title}</h1>
+      <h4>{post.category}</h4>
+      <h4>{post.song}</h4>
       <BlockContent blocks={post.body} serializers={serializers} />
       <Link href="/">
         <a>Domůůůů</a>
       </Link>
-    </Layout>
+    </LayoutPost>
   );
 };
 
