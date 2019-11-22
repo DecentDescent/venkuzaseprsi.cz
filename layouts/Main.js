@@ -1,10 +1,10 @@
-import Head from "next/head";
-export default ({ children, title }) => (
+import Head from "../components/Head";
+import styles from "./Main.scss";
+
+export default ({ children }) => (
   <div>
-    <Head>
-      <title>{title}</title>
-    </Head>
+    <Head title="Test" excerpt="Ahoj" />
     <header></header>
-    <main>{children}</main>
+    <main className={styles["main"]}>{children}</main>
   </div>
 );

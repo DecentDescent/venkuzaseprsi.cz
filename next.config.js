@@ -1,10 +1,6 @@
-const path = require("path");
+const withSass = require("@zeit/next-sass");
 
-module.exports = {
-  webpack: (config, { dev }) => {
-    return config;
-  },
-  webpackDevMiddleware: config => {
-    return config;
-  }
-};
+module.exports = withSass({
+  target: "serverless",
+  cssModules: true
+});

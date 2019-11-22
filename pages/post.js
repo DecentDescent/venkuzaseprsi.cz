@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "layouts/Main";
-import { getNextPost, getPost } from "api/posts";
+import Layout from "../layouts/Main";
+import { getNextPost, getPost } from "../api/posts";
 import BlockContent from "@sanity/block-content-to-react";
 import { Link } from "../routes";
 
@@ -23,7 +23,7 @@ const PostPage = ({ post }) => {
     return "Loading";
   }
   return (
-    <Layout title={post.title + " - Venku zase prší"}>
+    <Layout>
       <h1>{post.order}</h1>
       <BlockContent blocks={post.body} serializers={serializers} />
       <Link href="/">

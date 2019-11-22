@@ -6,30 +6,24 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_PATH=. NODE_ENV=production node server.js",
-    "lint": "standard 'api/*' 'components/*' 'layouts/*' 'pages/*' 'styles/*' 'routes.js' 'server.js'",
-    "precommit": "lint-staged"
+    "lint": "standard 'api/*' 'components/*' 'layouts/*' 'pages/*' 'styles/*' 'routes.js' 'server.js'"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
-    "babel-eslint": "^8.0.1",
-    "babel-plugin-module-resolver": "^2.7.1",
+    "@zeit/next-sass": "^1.0.1",
     "express": "^4.16.2",
-    "husky": "^0.14.3",
+    "isomorphic-fetch": "^2.2.1",
     "lint-staged": "^4.2.3",
-    "next": "^4.0.3",
+    "next": "^9.1.4",
     "next-routes": "^1.1.0",
+    "node-sass": "^4.13.0",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "webpack": "^4.41.2"
   },
   "now": {
     "alias": "next-go"
-  },
-  "standard": {
-    "parser": "babel-eslint",
-    "ignore": [
-      "**/node_modules/**"
-    ]
   },
   "lint-staged": {
     "*.js": [

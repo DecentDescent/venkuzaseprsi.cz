@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "layouts/Main";
-import { getPosts } from "api/posts";
-import Post from "components/Post";
+import Layout from "../layouts/Main";
+import { getPosts } from "../api/posts";
+import Post from "../components/Post";
 
 const IndexPage = ({ posts }) => {
   if (!posts) {
@@ -9,7 +9,7 @@ const IndexPage = ({ posts }) => {
   }
 
   return (
-    <Layout title="Venku zase prší">
+    <Layout>
       {posts.result.map(p => (
         <article>
           <Post key={p.title} post={p} type="home" />
