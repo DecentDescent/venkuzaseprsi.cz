@@ -12,7 +12,7 @@ const IndexPage = ({ posts }) => {
     <Layout title="Venku zase prší">
       {posts.result.map(p => (
         <article>
-          <Post key={p.title} post={p} />
+          <Post key={p.title} post={p} type="home" />
         </article>
       ))}
     </Layout>

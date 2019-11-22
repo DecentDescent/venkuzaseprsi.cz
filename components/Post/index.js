@@ -12,11 +12,15 @@ const serializers = {
   }
 };
 
-const PostItem = ({ post }) => (
+const PostItem = ({ type, post }) => (
   <Link route="post" params={{ slug: post.slug.current }}>
     <a>
       <h3>{post.title}</h3>
-      <BlockContent blocks={post.body} serializers={serializers} />
+      {type === "home" ? (
+        <p>{post.excerpt}</p>
+      ) : (
+        <BlockContent blocks={post.body} serializers={serializers} />
+      )}
     </a>
   </Link>
 );

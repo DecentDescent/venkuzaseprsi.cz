@@ -1,7 +1,8 @@
 import React from "react";
 import Layout from "layouts/Main";
-import { getPost } from "api/posts";
+import { getNextPost, getPost } from "api/posts";
 import BlockContent from "@sanity/block-content-to-react";
+import { Link } from "../routes";
 
 const serializers = {
   types: {
@@ -13,15 +14,21 @@ const serializers = {
   }
 };
 
+const getNext = id => {
+  const nextPost = getNextPost(id);
+  console.log(nextPost);
+};
 const PostPage = ({ post }) => {
-  console.log("a", post);
   if (!post) {
-    return "xLoading";
+    return "Loading";
   }
   return (
-    <Layout title="Záznam!">
-      <h1>{post.title}</h1>
+    <Layout title={post.title + " - Venku zase prší"}>
+      <h1>{post.order}</h1>
       <BlockContent blocks={post.body} serializers={serializers} />
+      <Link href="/">
+        <a>Domůůůů</a>
+      </Link>
     </Layout>
   );
 };

@@ -1,13 +1,10 @@
 import Head from "next/head";
-import Nav from "components/Nav";
-export default ({ children, title = "This is the default title" }) => (
+export default ({ children, title }) => (
   <div>
     <Head>
       <title>{title}</title>
     </Head>
-    <header>
-      <Nav />
-    </header>
+    <header></header>
     <main>{children}</main>
   </div>
 );
