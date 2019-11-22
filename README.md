@@ -1,27 +1,19 @@
-# venkuzaseprsi.cz
+### Next.js Go
 
-Repository for blog [venkuzaseprsi.cz](https://www.venkuzaseprsi.cz) by [@DecentDescent](https://github.com/DecentDescent/). Developed in one rainy afternoon (that's a lie).
-No WordPress! No puppies were killed during the development.
+Read more here: https://medium.com/styled-components/building-a-blog-with-next-js-359cf1236574
 
-#### How to start dev environment
+Production ready Next.js app with the following:
 
-1. Run `npm install`
-2. Run `npm run dev`
-3. Go to `localhost:3000`
+- [x] Next.js 4.X
+- [x] absolute imports
+- [x] styled-components
+- [x] eslint with [standard](https://github.com/standard/standard)
+- [x] next-routes
+- [x] express
+- [ ] timber logging
 
-#### How to deploy
+### Preview:
 
-1. Make sure you are connected to your ZEIT account
-2. Run `now --public`
+Some basic styles are included, they look like:
 
-#### Used Resources
-
-- NextJS by Zeit + nextjs-sass
-- \_reset.scss by Eric Meyer + Trey Piepmeier + Jason T Johnson
-- Rain by Gera Music (AudioJungle.net)
-- Data served by Markdown & JSON
-
-#### Special Thanks
-
-- Tom Randus ([@dizzyn](https://github.com/dizzyn))
-- Maja Chabirova
+[![next-go](./docs/next-go.png)](https://github.com/timberio/next-go)

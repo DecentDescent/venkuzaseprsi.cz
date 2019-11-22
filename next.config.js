@@ -1,20 +1,10 @@
-const withPlugins = require("next-compose-plugins");
-const withCSS = require("@zeit/next-css");
-const withSass = require("@zeit/next-sass");
+const path = require("path");
 
-const nextConfig = {
-  webpack: config => {
-    config.node = {
-      fs: "empty",
-      modules: false
-    };
-
+module.exports = {
+  webpack: (config, { dev }) => {
     return config;
   },
-  target: "serverless"
+  webpackDevMiddleware: config => {
+    return config;
+  }
 };
-
-module.exports = withPlugins(
-  [withCSS, withSass({ cssModules: true })],
-  nextConfig
-);
