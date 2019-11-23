@@ -1,6 +1,6 @@
 import React from "react";
 import { LayoutPost } from "../components/Layout";
-import { getNextPost, getPost } from "../api/posts";
+import { getPost } from "../api/posts";
 import BlockContent from "@sanity/block-content-to-react";
 import { Link } from "../routes";
 
@@ -14,10 +14,6 @@ const serializers = {
   }
 };
 
-const getNext = id => {
-  const nextPost = getNextPost(id);
-  console.log(nextPost);
-};
 const PostPage = ({ post }) => {
   if (!post) {
     return "Loading";
@@ -27,14 +23,21 @@ const PostPage = ({ post }) => {
       imageAuthor={post.imageAuthor}
       imageLink={post.imageLink}
       image={post.image}
+      imagePosition={post.imagePosition}
+      title={post.title}
+      excerpt={post.excerpt}
+      order={post.order}
+      song={post.song}
+      songURL={post.songURL}
     >
-      <h1>{post.title}</h1>
-      <h4>{post.category}</h4>
-      <h4>{post.song}</h4>
       <BlockContent blocks={post.body} serializers={serializers} />
-      <Link href="/">
-        <a>Domůůůů</a>
-      </Link>
+      <footer>
+        <Link href="/">
+          <svg viewBox="0 0 47.707 47.707">
+            <path d="m26.561 0h-24c-.552 0-1 .447-1 1s.448 1 1 1h24c9.925 0 18 8.075 18 18s-8.075 18-18 18h-21.586l6.293-6.293-1.414-1.414-7.999 7.999c-.001.001-.001.001-.002.002l-.707.706.706.706.002.002 7.999 7.999 1.414-1.414-6.292-6.293h21.586c11.028 0 20-8.972 20-20s-8.973-20-20-20z" />
+          </svg>
+        </Link>
+      </footer>
     </LayoutPost>
   );
 };

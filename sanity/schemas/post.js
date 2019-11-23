@@ -39,17 +39,22 @@ export default {
     },
     {
       name: "image",
-      title: "Image",
+      title: "Image Link",
       type: "string"
     },
     {
       name: "imageLink",
-      title: "Image Link",
+      title: "Image Author Link",
       type: "string"
     },
     {
       name: "imageAuthor",
       title: "Image Author",
+      type: "string"
+    },
+    {
+      name: "imagePosition",
+      title: "Image Position",
       type: "string"
     },
     {

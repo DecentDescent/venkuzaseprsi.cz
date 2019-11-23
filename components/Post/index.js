@@ -16,10 +16,10 @@ const PostItem = ({ type, post }) => (
   <Link route="post" params={{ slug: post.slug.current }}>
     <a>
       <h3>{post.title}</h3>
-      {type === "home" ? (
-        <p>{post.excerpt}</p>
-      ) : (
+      {type !== "home" ? (
         <BlockContent blocks={post.body} serializers={serializers} />
+      ) : (
+        ""
       )}
     </a>
   </Link>

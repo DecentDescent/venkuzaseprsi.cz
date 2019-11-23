@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Karma|Quicksand|VT323&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,400i&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Kulim+Park&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Londrina+Outline&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap");
+$light-blue: rgb(220, 237, 255);
+$dark-blue: rgb(25, 43, 63);
 body {
   width: 100vw;
   height: 100vh;
@@ -16,6 +21,100 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100%;
+    box-sizing: border-box;
+
+    .post__article {
+      overflow: auto;
+      padding: 48px 92px;
+      background: $dark-blue;
+      color: $light-blue;
+      box-sizing: border-box;
+
+      article {
+        max-width: 60ch;
+        margin: 0 auto;
+        position: relative;
+        box-sizing: border-box;
+
+        &:before {
+          position: fixed;
+          height: 32px;
+          content: "";
+          left: 50vw;
+          right: 0;
+          top: 0;
+          background: $dark-blue;
+        }
+
+        &:after {
+          position: fixed;
+          height: 32px;
+          content: "";
+          left: 50vw;
+          right: 0;
+          bottom: 0;
+          background: $dark-blue;
+        }
+
+        h1 {
+          font-family: "Kulim Park";
+          font-size: 32px;
+          text-align: center;
+        }
+
+        h4 {
+          font-family: "Titillium Web", sans-serif;
+          font-size: 17px;
+          text-align: center;
+
+          span {
+            margin: 0 12px;
+          }
+        }
+
+        p {
+          font-family: "Titillium Web", sans-serif;
+          font-size: 19px;
+          line-height: 1.7;
+          margin: 30px 0;
+        }
+      }
+
+      footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 42px;
+        box-sizing: border-box;
+        svg {
+          fill: white;
+          width: 28px;
+          display: inline-block;
+          cursor: pointer;
+          transition: all 0.24s;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  &.main--home {
+    background: #dcedff;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(100px, 200px));
+    padding: 128px 48px;
+    box-sizing: border-box;
+
+    article {
+      border: 1px solid fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
@@ -23,55 +122,72 @@ body {
 .post__image {
   width: 100%;
   height: 100%;
+  border-right: none;
+  box-sizing: border-box;
+  position: relative;
+  border: 32px solid $dark-blue;
+  border-right: none;
 
-  .image__credit {
+  .image__mask {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    bottom: 16px;
-    left: 16px;
-    font-size: 18px;
-    font-family: "VT323", monospace;
-    opacity: 0.6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 400px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Odibee Sans", cursive;
+    cursor: default;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba($light-blue, 0.3);
+  }
 
+  .song {
     a {
-      color: #fff;
+      font-size: 14px;
+      position: absolute;
+      color: $light-blue;
+      background: $dark-blue;
+      padding: 8px 12px;
+      border-radius: 8px 8px 0 0;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      opacity: 1;
+      z-index: 900;
+      font-family: "Titillium Web", sans-serif;
+      cursor: pointer;
+      transition: all 0.25s;
       text-decoration: none;
-      transition: all 0.5s;
-
-      span {
-        font-family: "Titillium Web", sans-serif;
-        font-size: 20px;
-        vertical-align: middle;
-        margin-right: -2px;
-      }
+      white-space: nowrap;
 
       &:hover {
-        color: cyan;
-        opacity: 1;
+        color: #1db954;
+
+        & + .song__spotify {
+          bottom: 48px;
+        }
       }
     }
   }
-}
 
-.post__article {
-  overflow: auto;
-  padding: 48px 64px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
-
-  article {
-    max-width: 550px;
-    margin: 0 auto;
-
-    h1 {
-      font-family: "VT323", monospace;
-      font-size: 54px;
-      text-align: center;
-    }
-
-    p {
-      font-family: "Titillium Web", serif;
-      font-size: 19px;
-      line-height: 1.6;
-      margin: 32px 0;
-    }
+  .song__spotify {
+    position: absolute;
+    bottom: 0px;
+    width: 32px;
+    height: 32px;
+    z-index: 800;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.25s;
   }
 }
