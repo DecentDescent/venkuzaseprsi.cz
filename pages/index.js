@@ -10,12 +10,12 @@ const IndexPage = ({ posts }) => {
 
   return (
     <Layout>
-      {/*<h1>Venku zase prší</h1>
+      <h1>Venku zase prší</h1>
       {posts.result.map(p => (
         <article>
           <Post key={p.orderId} post={p} type="home" />
         </article>
-      ))}*/}
+      ))}
     </Layout>
   );
 };
