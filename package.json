@@ -1,5 +1,5 @@
 {
-  "name": "next-go",
+  "name": "venkuzaseprsi.cz",
   "description": "Production ready blog + boilerplate for Next.js",
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,7 @@
     "webpack": "^4.41.2"
   },
   "now": {
-    "alias": "next-go"
+    "alias": "venkuzaseprsi.cz"
   },
   "lint-staged": {
     "*.js": [
