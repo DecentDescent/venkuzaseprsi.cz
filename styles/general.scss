@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,400i&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Kulim+Park&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap");
+
+$light-blue: rgb(220, 237, 255);
+$dark-blue: rgb(25, 43, 63);
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: $dark-blue;
+}
