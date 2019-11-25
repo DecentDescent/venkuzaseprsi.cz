@@ -68,7 +68,6 @@ nav {
       left: 0;
       right: 0;
       bottom: 0;
-      font-size: 128px;
       font-weight: bold;
       display: flex;
       align-items: center;
@@ -79,7 +78,10 @@ nav {
       flex-direction: column;
       background: url(https://img.huffingtonpost.com/asset/5b1563f52200004400eea70b.jpeg?ops=scalefit_960_noupscale);
       background-size: cover;
-      font-family: "Odibee Sans", cursive;
+      font-size: 128px;
+      color: white;
+      font-weight: 700;
+      font-family: "Titillium Web", sans-serif;
       cursor: default;
       font-weight: bold;
       background-clip: text;

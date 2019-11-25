@@ -9,7 +9,11 @@ export const LayoutHome = ({ data }) => (
   <>
     <Head />
     <Header />
+
     <main className={classnames(styles["main"], styles["main--home"])}>
+      <div className={styles["home__header"]}>
+        <h1>venku zase prší</h1>
+      </div>
       {data.map(p => (
         <PostHome key={p.order} post={p} />
       ))}

@@ -41,7 +41,7 @@ function Header() {
             <br />
             zase
             <br />
-            prshi
+            prší
           </div>
         </div>
         <div className={styles["nav__content"]}>
