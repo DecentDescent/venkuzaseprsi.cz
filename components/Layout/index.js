@@ -1,5 +1,4 @@
 import Head from "../Head";
-import { Link } from "../../routes";
 import Header from "../Header";
 import styles from "./Layout.scss";
 import { PostHome, PostDetail } from "../Post";
