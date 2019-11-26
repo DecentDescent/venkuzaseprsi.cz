@@ -40,7 +40,7 @@ app.prepare().then(() => {
     return handle(req, res);
   });
   // Get current port.
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT || 3300;
   // Error check.
   server.listen(3000, err => {
     if (err) {

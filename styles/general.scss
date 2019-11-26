@@ -6,8 +6,12 @@ $light-blue: rgb(220, 237, 255);
 $dark-blue: rgb(25, 43, 63);
 
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin: 0;
   background: $dark-blue;
+
+  * {
+    box-sizing: border-box;
+  }
 }

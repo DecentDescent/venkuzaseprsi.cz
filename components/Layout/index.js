@@ -7,17 +7,20 @@ import classnames from "classnames";
 export const LayoutHome = ({ data }) => (
   <>
     <Head />
-    <Header />
+    <Header type="home" />
 
     <main className={classnames(styles["main"], styles["main--home"])}>
-      <div className={styles["home__header"]}>
-        <h1>venku zase prší</h1>
-      </div>
       {data.map(p => (
         <PostHome key={p.order} post={p} />
       ))}
     </main>
+    
     <footer className={styles["main__footer"]}>
+      <div className={styles["footer__icons"]}>
+        <a>Spotify</a>
+        <a>Email</a>
+        <a>FB</a>
+      </div>
       &copy; 2017–2019 venkuzaseprsi.cz
     </footer>
   </>
