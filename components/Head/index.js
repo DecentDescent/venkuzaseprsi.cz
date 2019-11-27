@@ -9,7 +9,11 @@ export default props => (
     </title>
     <meta
       name="description"
-      content={props.excerpt ? props.excerpt : "Venku zase prší"}
+      content={
+        props.excerpt
+          ? props.excerpt
+          : "Mám rád, když prší. Mám rád, když prší ve městě. Když prší, někdy o tom napíšu. Někdy ale napíšu, i když neprší. Vítej na blogu o dešti, městě, blbejch lidech, tramvajích a letadlech."
+      }
     />
     <meta
       property="og:title"
@@ -17,9 +21,18 @@ export default props => (
         props.title ? props.title + " – Venku zase prší" : "Venku zase prší"
       }
     />
+
+    <meta
+      property="og:image"
+      content={props.image ? props.image : "/static/og.jpg"}
+    />
     <meta
       property="og:description"
-      content={props.excerpt ? props.excerpt : "Venku zase prší"}
+      content={
+        props.excerpt
+          ? props.excerpt
+          : "Mám rád, když prší. Mám rád, když prší ve městě. Když prší, někdy o tom napíšu. Někdy ale napíšu, i když neprší. Vítej na blogu o dešti, městě, blbejch lidech, tramvajích a letadlech."
+      }
     />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta property="og:type" content="website" />

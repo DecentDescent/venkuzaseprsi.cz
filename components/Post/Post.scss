@@ -116,11 +116,11 @@
 
     &:before {
       position: fixed;
+      width: calc(50vw - 40px);
       height: 32px;
       content: "";
-      left: 50vw;
-      right: 0;
       top: 0;
+      right: 20px;
       background: $dark-blue;
 
       @media (max-width: 850px) {
@@ -130,11 +130,11 @@
 
     &:after {
       position: fixed;
+      width: calc(50vw - 40px);
       height: 32px;
       content: "";
-      left: 50vw;
-      right: 0;
       bottom: 0;
+      right: 20px;
       background: $dark-blue;
 
       @media (max-width: 850px) {

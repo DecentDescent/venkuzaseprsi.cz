@@ -30,7 +30,7 @@ export const LayoutPost = ({ data }) => (
   <>
     <Cursor />
     <div className={styles["page"]}>
-      <Head title={data.title} excerpt={data.excerpt} />
+      <Head title={data.title} excerpt={data.excerpt} image={data.image} />
       <main className={classnames(styles["main"], styles["main--post"])}>
         <PostDetail post={data} />
       </main>
