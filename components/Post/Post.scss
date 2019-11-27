@@ -8,7 +8,9 @@
   position: relative;
   border: 32px solid $dark-blue;
   border-right: none;
-
+  @media (max-width: 850px) {
+    border-right: 32px solid $dark-blue;
+  }
   .image__mask {
     width: 100%;
     height: 100%;
@@ -29,6 +31,10 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: rgba($light-blue, 0.3);
+
+    @media (max-width: 850px) {
+      font-size: 200px;
+    }
   }
 
   .song {
@@ -48,6 +54,7 @@
       transition: all 0.25s;
       text-decoration: none;
       white-space: nowrap;
+      overflow: hidden;
 
       &:hover {
         color: #1db954;
@@ -56,6 +63,10 @@
           bottom: 48px;
         }
       }
+    }
+
+    @media (max-width: 850px) {
+      display: none;
     }
   }
 
@@ -68,6 +79,9 @@
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.25s;
+    @media (max-width: 850px) {
+      display: none;
+    }
   }
 }
 
@@ -78,7 +92,6 @@
   background: $dark-blue;
   color: $light-blue;
   box-sizing: border-box;
-  z-index: 0;
   &::-webkit-scrollbar {
     width: 6px;
   }
@@ -109,6 +122,10 @@
       right: 0;
       top: 0;
       background: $dark-blue;
+
+      @media (max-width: 850px) {
+        display: none;
+      }
     }
 
     &:after {
@@ -119,6 +136,10 @@
       right: 0;
       bottom: 0;
       background: $dark-blue;
+
+      @media (max-width: 850px) {
+        display: none;
+      }
     }
 
     h1 {
@@ -165,10 +186,13 @@
       }
     }
   }
+
+  @media (max-width: 850px) {
+    padding: 0 42px 24px 42px;
+  }
 }
 
 // Home Grid
-
 .home__item {
   border: 0px solid white;
   transition: border 0.4s ease-in;
@@ -256,5 +280,23 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: rgba($light-blue, 0.3);
+  }
+}
+
+.song-mobile {
+  display: none;
+  font-size: 16px;
+  z-index: 900;
+  font-family: "Titillium Web", sans-serif;
+  color: #1db954;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-white;
+  }
+  @media (max-width: 850px) {
+    display: block;
   }
 }

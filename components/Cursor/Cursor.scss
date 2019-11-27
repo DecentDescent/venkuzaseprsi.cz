@@ -19,7 +19,6 @@
   height: 8px;
   border-radius: 100%;
   background: $color-white;
-  z-index: 1;
   user-select: none;
   transition: 0.3s background, 1s transform;
   pointer-events: none;
@@ -42,7 +41,6 @@
   width: 32px;
   height: 32px;
   border-radius: 100%;
-  z-index: 1;
   user-select: none;
   pointer-events: none;
   transition: transform 0.3s;

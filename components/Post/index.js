@@ -55,6 +55,9 @@ export const PostDetail = ({ post }) => (
     <div className={[styles["post__article"]]}>
       <article>
         <h1>{post.title}</h1>
+        <a className={styles["song-mobile"]} href={post.songURL} gsap="true">
+          Mood Song: {post.song}
+        </a>
         <BlockContent blocks={post.body} serializers={serializers} />
       </article>
       <footer>

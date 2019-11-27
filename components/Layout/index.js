@@ -10,16 +10,15 @@ const n = d.getFullYear();
 
 export const LayoutHome = ({ data }) => (
   <>
-    <Head />
-    <div className={styles["scollable-wrapper"]}>
+    <Cursor />
+    <div className={styles["page"]}>
+      <Head />
       <Header type="home" />
-      <Cursor />
       <main className={classnames(styles["main"], styles["main--home"])}>
         {data.map(p => (
           <PostHome key={p.order} post={p} />
         ))}
       </main>
-
       <footer className={styles["main__footer"]}>
         &copy; 2017–{n} venkuzaseprsi.cz
       </footer>
@@ -29,11 +28,12 @@ export const LayoutHome = ({ data }) => (
 
 export const LayoutPost = ({ data }) => (
   <>
-    <Head title={data.title} excerpt={data.excerpt} />
-    <Header />
     <Cursor />
-    <main className={classnames(styles["main"], styles["main--post"])}>
-      <PostDetail post={data} />
-    </main>
+    <div className={styles["page"]}>
+      <Head title={data.title} excerpt={data.excerpt} />
+      <main className={classnames(styles["main"], styles["main--post"])}>
+        <PostDetail post={data} />
+      </main>
+    </div>
   </>
 );
