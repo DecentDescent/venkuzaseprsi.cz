@@ -1,0 +1,53 @@
+@import "../../styles/general.scss";
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.cursor {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: $color-white;
+  z-index: 1;
+  user-select: none;
+  transition: 0.3s background, 1s transform;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+
+  &.cursor--active {
+    background: #06aed5;
+    transform: scale(2);
+  }
+}
+
+.cursor-follower {
+  position: absolute;
+  border: 1px solid rgba($color-white, 1);
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s;
+  z-index: 10000;
+  transform: translateX(0) translateY(0);
+  &.cursor-follower--active {
+    transition: transform 0.3s;
+    opacity: 0.7;
+    animation: breathe 2s infinite;
+    transform: scale(2);
+  }
+}

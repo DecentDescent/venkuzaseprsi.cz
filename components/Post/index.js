@@ -39,7 +39,9 @@ export const PostDetail = ({ post }) => (
       </div>
 
       <div className={styles["song"]}>
-        <a href={post.songURL}>{post.song}</a>
+        <a href={post.songURL} gsap="true">
+          {post.song}
+        </a>
         <div className={styles["song__spotify"]}>
           <svg viewBox="0 0 427.652 427.652">
             <path
@@ -57,7 +59,7 @@ export const PostDetail = ({ post }) => (
       </article>
       <footer>
         <Link href="/">
-          <svg viewBox="0 0 47.707 47.707">
+          <svg viewBox="0 0 47.707 47.707" gsap="true">
             <path d="m26.561 0h-24c-.552 0-1 .447-1 1s.448 1 1 1h24c9.925 0 18 8.075 18 18s-8.075 18-18 18h-21.586l6.293-6.293-1.414-1.414-7.999 7.999c-.001.001-.001.001-.002.002l-.707.706.706.706.002.002 7.999 7.999 1.414-1.414-6.292-6.293h21.586c11.028 0 20-8.972 20-20s-8.973-20-20-20z" />
           </svg>
         </Link>
@@ -69,6 +71,7 @@ export const PostDetail = ({ post }) => (
 export const PostHome = ({ post }) => (
   <Link route="post" params={{ slug: post.slug.current }}>
     <div
+      gsap="true"
       className={styles["home__item"]}
       style={{
         background:

@@ -16,14 +16,12 @@ function Header(props) {
         <h1>venku zase prší</h1>
       </div>
       <div className={styles["header__toggle"]}>
-        <svg
-          viewBox="0 0 64 64"
-        >
+        <svg viewBox="0 0 64 64">
           <g
             fill="none"
-            fill-rule="evenodd"
-            stroke-linecap="round"
-            stroke-width="4"
+            fillRule="evenodd"
+            strokeLinecap="round"
+            strokeWidth="4"
           >
             <path d="m22 32h26" />
             <path d="m16 48h32" />
