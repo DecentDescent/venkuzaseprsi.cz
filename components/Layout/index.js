@@ -21,11 +21,6 @@ export const LayoutHome = ({ data }) => (
       </main>
 
       <footer className={styles["main__footer"]}>
-        <div className={styles["footer__icons"]}>
-          <a>Spotify</a>
-          <a>Email</a>
-          <a>FB</a>
-        </div>
         &copy; 2017–{n} venkuzaseprsi.cz
       </footer>
     </div>

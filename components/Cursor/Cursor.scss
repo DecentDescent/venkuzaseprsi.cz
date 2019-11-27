@@ -30,6 +30,10 @@
     background: #06aed5;
     transform: scale(2);
   }
+
+  &.cursor--hide {
+    display: none;
+  }
 }
 
 .cursor-follower {
@@ -44,10 +48,15 @@
   transition: transform 0.3s;
   z-index: 10000;
   transform: translateX(0) translateY(0);
+
   &.cursor-follower--active {
     transition: transform 0.3s;
     opacity: 0.7;
     animation: breathe 2s infinite;
     transform: scale(2);
+  }
+
+  &.cursor-follower--hide {
+    display: none;
   }
 }
