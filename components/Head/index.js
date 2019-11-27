@@ -24,7 +24,9 @@ export default props => (
 
     <meta
       property="og:image"
-      content={props.image ? props.image : "/static/og.jpg"}
+      content={
+        props.image ? props.image : "https://venkuzaseprsi.cz/static/og.jpg"
+      }
     />
     <meta
       property="og:description"
