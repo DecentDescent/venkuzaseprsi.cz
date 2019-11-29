@@ -1,8 +1,7 @@
 import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import styles from "./Post.scss";
-import classnames from "classnames";
-
+import Link from "next/link";
 const serializers = {
   types: {
     code: props => (
@@ -71,7 +70,7 @@ export const PostDetail = ({ post }) => (
 );
 
 export const PostHome = ({ post }) => (
-  <Link route="post" params={{ slug: post.slug.current }}>
+  <Link href={post.slug.current}>
     <div
       gsap="true"
       className={styles["home__item"]}

@@ -1,14 +1,32 @@
-import { useRouter } from "next/router";
+import { withRouter, useRouter } from "next/router";
 import { getPost } from "../api/posts";
 import { LayoutPost } from "../components/Layout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Post = () => {
-  const [data, setData] = useState(null);
+const Post = ({ data }) => {
+  const [postData, setData] = useState(data);
+
   const router = useRouter();
   const { id } = router.query;
-  getPost(id).then(res => res.json().then(json => setData(json.result[0])));
-  return data ? <LayoutPost data={data} /> : "Loading";
+
+  useEffect(() => {
+    getPost(id).then(res => res.json().then(json => setData(json.result[0])));
+  }, [id]);
+
+  return postData ? <LayoutPost data={postData} /> : "Loading";
 };
 
-export default Post;
+Post.getInitialProps = async ({ req }) => {
+  if (typeof window !== "undefined") {
+    return { data: null };
+  }
+
+  const id = req.url.replace("/", "");
+  const res = await getPost(id);
+  const json = await res.json();
+  const data = json.result[0];
+  console.log("SERVER!");
+  return { data };
+};
+
+export default withRouter(Post);
