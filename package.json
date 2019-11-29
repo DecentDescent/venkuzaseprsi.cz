@@ -3,9 +3,11 @@
   "description": "Production ready blog + boilerplate for Next.js",
   "license": "MIT",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
+    "devX": "node server.js",
     "build": "next build",
-    "start": "NODE_PATH=. NODE_ENV=production node server.js",
+    "startX": "NODE_PATH=. NODE_ENV=production node server.js",
+    "start": "next start",
     "lint": "standard 'api/*' 'components/*' 'layouts/*' 'pages/*' 'styles/*' 'routes.js' 'server.js'"
   },
   "dependencies": {
