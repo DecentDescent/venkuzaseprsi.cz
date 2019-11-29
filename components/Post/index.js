@@ -2,7 +2,6 @@ import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import styles from "./Post.scss";
 import classnames from "classnames";
-import { Link } from "../../routes";
 
 const serializers = {
   types: {
@@ -61,11 +60,11 @@ export const PostDetail = ({ post }) => (
         <BlockContent blocks={post.body} serializers={serializers} />
       </article>
       <footer>
-        <Link href="/">
+        <a>
           <svg viewBox="0 0 47.707 47.707" gsap="true">
             <path d="m26.561 0h-24c-.552 0-1 .447-1 1s.448 1 1 1h24c9.925 0 18 8.075 18 18s-8.075 18-18 18h-21.586l6.293-6.293-1.414-1.414-7.999 7.999c-.001.001-.001.001-.002.002l-.707.706.706.706.002.002 7.999 7.999 1.414-1.414-6.292-6.293h21.586c11.028 0 20-8.972 20-20s-8.973-20-20-20z" />
           </svg>
-        </Link>
+        </a>
       </footer>
     </div>
   </>
