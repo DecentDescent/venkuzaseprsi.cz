@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import ReactGA from "react-ga";
 export default props => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -61,13 +61,10 @@ export default props => (
     />
     <meta name="msapplication-TileColor" content="#06aed5" />
     <meta name="theme-color" content="#ffffff" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89692734-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-89692734-1');
-    </script>
   </Head>
 );
+
+export const initGA = () => {
+  console.log("GA init");
+  ReactGA.initialize("UA-89692734-1");
+};
