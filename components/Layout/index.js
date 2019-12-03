@@ -11,7 +11,7 @@ const n = d.getFullYear();
 
 export class LayoutHome extends React.Component {
   componentDidMount() {
-    ReactGA.initialize("UA-50377630-2");
+    ReactGA.initialize("UA-89692734-1");
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
   render() {
@@ -37,7 +37,7 @@ export class LayoutHome extends React.Component {
 
 export class LayoutPost extends React.Component {
   componentDidMount() {
-    ReactGA.initialize("UA-50377630-2");
+    ReactGA.initialize("UA-89692734-1");
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
   render() {
