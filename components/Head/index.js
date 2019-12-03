@@ -1,5 +1,4 @@
 import Head from "next/head";
-import ReactGA from "react-ga";
 export default props => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -63,8 +62,3 @@ export default props => (
     <meta name="theme-color" content="#ffffff" />
   </Head>
 );
-
-export const initGA = () => {
-  console.log("GA init");
-  ReactGA.initialize("UA-89692734-1");
-};
