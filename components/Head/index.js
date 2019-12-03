@@ -61,5 +61,13 @@ export default props => (
     />
     <meta name="msapplication-TileColor" content="#06aed5" />
     <meta name="theme-color" content="#ffffff" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89692734-1"></script>
+    <script>{
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89692734-1');}
+    </script>
   </Head>
 );
