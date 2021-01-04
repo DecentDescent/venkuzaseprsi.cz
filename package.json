@@ -17,6 +17,7 @@
     "lint-staged": "^4.2.3",
     "next": "^9.1.4",
     "next-routes": "^1.1.0",
+    "nextjs-redirect": "^5.0.0",
     "node-sass": "^4.13.0",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
